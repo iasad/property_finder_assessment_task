@@ -8,7 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class FirstViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ButtonInformationProtocol {
+    
+    //Protocol method
+    func buttonInformation(order: String) {
+        switch order {
+        case "pa":
+            self.segmentedController.selectedSegmentIndex = 0
+        case "pd":
+            self.segmentedController.selectedSegmentIndex = 1
+        case "ba":
+            self.segmentedController.selectedSegmentIndex = 2
+        case "bd":
+            self.segmentedController.selectedSegmentIndex = 3
+        default:
+            return
+        }
+        setupData(order: order)
+    }
+    
     
     //IBOutlets
     @IBOutlet weak var segmentedController: UISegmentedControl!
@@ -34,7 +52,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //Getting data from server
         getData(order: self.order, page: self.page)
     }
-    
     
     
     //SegmentedController action listener
@@ -63,11 +80,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
 }
 
-extension ViewController {
+extension FirstViewController {
     
     //NavigationBarSetup
     func navigationBarSetup() {
         self.title = "Property Finder"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sort", style: .plain, target: self, action: #selector(goToNextController))
+    }
+    
+    @objc func goToNextController() {
+        self.performSegue(withIdentifier: "goToSecondVC", sender: nil)
+    }
+    
+    //Prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSecondVC" {
+            if let dest = segue.destination as? SecondViewController {
+                dest.delegate = self
+            }
+        }
     }
     
     //Delegates
@@ -135,7 +166,7 @@ extension ViewController {
     }
 }
 
-extension ViewController {
+extension FirstViewController {
     
     //CollectionView Delegate Methods
     
