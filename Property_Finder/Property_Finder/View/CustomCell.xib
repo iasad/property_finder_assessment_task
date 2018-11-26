@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="jDh-1T-SVk" customClass="CustomCollectionViewCell" customModule="Property_Finder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="450"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="450"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHI-R3-My9">
+                        <rect key="frame" x="0.0" y="0.0" width="485" height="450"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZEk-e9-6zs" customClass="CachedImageView" customModule="Property_Finder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="485" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="nE6-xc-p0g"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2000 AED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw6-gi-TVk">
+                                <rect key="frame" x="20" y="320" width="445" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Bedrooms 3 Bathrooms" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViX-XJ-t5o">
+                                <rect key="frame" x="20" y="357.5" width="445" height="27.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZEk-e9-6zs" firstAttribute="top" secondItem="AHI-R3-My9" secondAttribute="top" id="9FO-nh-sP5"/>
+                            <constraint firstItem="ViX-XJ-t5o" firstAttribute="leading" secondItem="cw6-gi-TVk" secondAttribute="leading" id="XNM-oc-taJ"/>
+                            <constraint firstItem="ViX-XJ-t5o" firstAttribute="top" secondItem="cw6-gi-TVk" secondAttribute="bottom" constant="10" id="YMo-SN-7q2"/>
+                            <constraint firstItem="ZEk-e9-6zs" firstAttribute="leading" secondItem="AHI-R3-My9" secondAttribute="leading" id="YaG-Rk-9oJ"/>
+                            <constraint firstItem="ViX-XJ-t5o" firstAttribute="trailing" secondItem="cw6-gi-TVk" secondAttribute="trailing" id="Z1u-f5-43I"/>
+                            <constraint firstAttribute="trailing" secondItem="cw6-gi-TVk" secondAttribute="trailing" constant="20" id="rvJ-Cf-IcR"/>
+                            <constraint firstItem="cw6-gi-TVk" firstAttribute="top" secondItem="ZEk-e9-6zs" secondAttribute="bottom" constant="20" id="uYt-n6-9ky"/>
+                            <constraint firstAttribute="trailing" secondItem="ZEk-e9-6zs" secondAttribute="trailing" id="x1D-H6-dlP"/>
+                            <constraint firstItem="cw6-gi-TVk" firstAttribute="leading" secondItem="AHI-R3-My9" secondAttribute="leading" constant="20" id="xus-FI-K0Z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="AHI-R3-My9" firstAttribute="top" secondItem="jDh-1T-SVk" secondAttribute="top" id="2DR-yG-S53"/>
+                <constraint firstAttribute="trailing" secondItem="AHI-R3-My9" secondAttribute="trailing" id="iuc-8d-hnn"/>
+                <constraint firstItem="AHI-R3-My9" firstAttribute="leading" secondItem="jDh-1T-SVk" secondAttribute="leading" id="mzj-8v-2Fq"/>
+                <constraint firstAttribute="bottom" secondItem="AHI-R3-My9" secondAttribute="bottom" id="yjC-TT-zoN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="97s-tA-Fa3"/>
+            <size key="customSize" width="485" height="483"/>
+            <connections>
+                <outlet property="price" destination="cw6-gi-TVk" id="asH-Nl-opM"/>
+                <outlet property="thumbnailImage" destination="ZEk-e9-6zs" id="2oi-kq-PE3"/>
+                <outlet property="title" destination="ViX-XJ-t5o" id="wi9-7e-vTR"/>
+            </connections>
+            <point key="canvasLocation" x="720.79999999999995" y="330.58470764617692"/>
+        </collectionViewCell>
+    </objects>
+</document>

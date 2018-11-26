@@ -12,6 +12,14 @@
 		C890F55821AC41EF004B3D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C890F55621AC41EF004B3D43 /* Main.storyboard */; };
 		C890F55A21AC41F0004B3D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C890F55921AC41F0004B3D43 /* Assets.xcassets */; };
 		C890F55D21AC41F0004B3D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C890F55B21AC41F0004B3D43 /* LaunchScreen.storyboard */; };
+		C890F56B21AC46D8004B3D43 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890F56A21AC46D8004B3D43 /* Constants.swift */; };
+		C890F56D21AC4788004B3D43 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890F56C21AC4788004B3D43 /* BaseModel.swift */; };
+		C890F56F21AC47D0004B3D43 /* APISevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890F56E21AC47D0004B3D43 /* APISevice.swift */; };
+		C890F57121AC4AE0004B3D43 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890F57021AC4AE0004B3D43 /* Extensions.swift */; };
+		C890F57321AC5A21004B3D43 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C890F57221AC5A21004B3D43 /* CustomCell.xib */; };
+		C890F57521AC5E27004B3D43 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890F57421AC5E27004B3D43 /* CustomCollectionViewCell.swift */; };
+		C890F57821AC5F98004B3D43 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890F57621AC5F98004B3D43 /* CachedImageView.swift */; };
+		C890F57921AC5F98004B3D43 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C890F57721AC5F98004B3D43 /* DiscardableImageCacheItem.swift */; };
 		F8A144D12212C5C630BF4EA3 /* Pods_Property_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C2759DA6221319052E0999 /* Pods_Property_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +34,14 @@
 		C890F55921AC41F0004B3D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C890F55C21AC41F0004B3D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C890F55E21AC41F0004B3D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C890F56A21AC46D8004B3D43 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C890F56C21AC4788004B3D43 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		C890F56E21AC47D0004B3D43 /* APISevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISevice.swift; sourceTree = "<group>"; };
+		C890F57021AC4AE0004B3D43 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C890F57221AC5A21004B3D43 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		C890F57421AC5E27004B3D43 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		C890F57621AC5F98004B3D43 /* CachedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		C890F57721AC5F98004B3D43 /* DiscardableImageCacheItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscardableImageCacheItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +94,70 @@
 		C890F55121AC41EF004B3D43 /* Property_Finder */ = {
 			isa = PBXGroup;
 			children = (
+				C890F56421AC4655004B3D43 /* Model */,
+				C890F56521AC465A004B3D43 /* View */,
+				C890F56621AC4660004B3D43 /* Controller */,
+				C890F56721AC468B004B3D43 /* Services */,
+				C890F56821AC46AB004B3D43 /* Supporting files */,
+				C890F56921AC46C5004B3D43 /* Utilities */,
 				C890F55221AC41EF004B3D43 /* AppDelegate.swift */,
-				C890F55421AC41EF004B3D43 /* ViewController.swift */,
 				C890F55621AC41EF004B3D43 /* Main.storyboard */,
 				C890F55921AC41F0004B3D43 /* Assets.xcassets */,
 				C890F55B21AC41F0004B3D43 /* LaunchScreen.storyboard */,
 				C890F55E21AC41F0004B3D43 /* Info.plist */,
 			);
 			path = Property_Finder;
+			sourceTree = "<group>";
+		};
+		C890F56421AC4655004B3D43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C890F56C21AC4788004B3D43 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C890F56521AC465A004B3D43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C890F57221AC5A21004B3D43 /* CustomCell.xib */,
+				C890F57421AC5E27004B3D43 /* CustomCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C890F56621AC4660004B3D43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C890F55421AC41EF004B3D43 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C890F56721AC468B004B3D43 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C890F56E21AC47D0004B3D43 /* APISevice.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C890F56821AC46AB004B3D43 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				C890F57621AC5F98004B3D43 /* CachedImageView.swift */,
+				C890F57721AC5F98004B3D43 /* DiscardableImageCacheItem.swift */,
+				C890F57021AC4AE0004B3D43 /* Extensions.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		C890F56921AC46C5004B3D43 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C890F56A21AC46D8004B3D43 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +222,7 @@
 			files = (
 				C890F55D21AC41F0004B3D43 /* LaunchScreen.storyboard in Resources */,
 				C890F55A21AC41F0004B3D43 /* Assets.xcassets in Resources */,
+				C890F57321AC5A21004B3D43 /* CustomCell.xib in Resources */,
 				C890F55821AC41EF004B3D43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,8 +275,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C890F56F21AC47D0004B3D43 /* APISevice.swift in Sources */,
+				C890F57521AC5E27004B3D43 /* CustomCollectionViewCell.swift in Sources */,
+				C890F57921AC5F98004B3D43 /* DiscardableImageCacheItem.swift in Sources */,
+				C890F57121AC4AE0004B3D43 /* Extensions.swift in Sources */,
 				C890F55521AC41EF004B3D43 /* ViewController.swift in Sources */,
 				C890F55321AC41EF004B3D43 /* AppDelegate.swift in Sources */,
+				C890F56D21AC4788004B3D43 /* BaseModel.swift in Sources */,
+				C890F57821AC5F98004B3D43 /* CachedImageView.swift in Sources */,
+				C890F56B21AC46D8004B3D43 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,11 +433,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L7U2WY396;
 				INFOPLIST_FILE = Property_Finder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iem.basketball.Property-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -369,11 +453,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2L7U2WY396;
 				INFOPLIST_FILE = Property_Finder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iem.basketball.Property-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
